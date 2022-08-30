@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'GoghExtraBold';
+    src: url('../fonts/GoghExtraBold.eot');
+    src: url('../fonts/GoghExtraBold.eot') format('embedded-opentype'),
+         url('../fonts/GoghExtraBold.woff2') format('woff2'),
+         url('../fonts/GoghExtraBold.woff') format('woff'),
+         url('../fonts/GoghExtraBold.ttf') format('truetype'),
+         url('../fonts/GoghExtraBold.svg#GoghExtraBold') format('svg');
+}

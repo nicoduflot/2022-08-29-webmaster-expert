@@ -1,0 +1,266 @@
+@import url("./GoghExtraBold.css");
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --bg-site: #ffffff; /* white #fff rgb(255, 255, 255) rgba(255, 255, 255, 1) */
+  --heading: #f20505;
+  --content: #161c40;
+  --link: #f2a30f;
+  --link-hover: #f27507;
+  --heading: "GoghExtraBold";
+}
+
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.carre {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: #161c40;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+}
+
+video, img{
+    max-width: 100%;
+}
+
+figure.video{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+}
+
+iframe.video{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    overflow:hidden;
+}
+
+body {
+  margin: 0;
+}
+
+body > header {
+  background-color: var(--content);
+  color: var(--bg-site);
+  padding: 0.1rem 0.5rem;
+}
+
+body > nav{
+  background-color: var(--content);
+}
+
+body > nav > ul,
+body > footer > div > nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body > nav > ul > li > a,
+body > nav > ul > li > a:visited,
+body > footer > div > nav > ul > li > a,
+body > footer > div > nav > ul > li > a:visited {
+  display: block;
+  line-height: 2rem;
+  padding: 2px 25px;
+  color: var(--link);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body > nav > ul > li > a:hover,
+body > nav > ul > li > a:focus,
+body > footer > div > nav > ul > li > a:hover,
+body > footer > div > nav > ul > li > a:focus {
+  color: var(--content);
+  background-color: var(--link);
+}
+
+body > main, 
+body > nav > ul,
+body > footer > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main{
+    padding: 5px 10px;
+}
+
+body > main > section > article{
+    border: 0px solid transparent;
+    padding: 5px;
+}
+
+body > footer{
+    background-color: var(--content);
+}
+
+body > footer h3{
+    color: var(--link);
+    padding-left: 25px;
+}
+
+/* media queries pour gérer le responsive sur les breakpoint */
+
+@media screen and (min-width: 576px) {
+  body > main, 
+  body > nav > ul,
+  body > footer > div {
+    max-width: 540px;
+  }
+/*
+  body > nav > ul{
+    columns: 2;
+  }
+
+  body > nav > ul > li > a,
+  body > nav > ul > li > a:visited{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+*/
+
+  body > nav > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  body > main, 
+  body > nav > ul,
+  body > footer > div {
+    max-width: 720px;
+  }
+
+  body > footer > div{
+    display: flex;
+  }
+
+  body > footer > div > nav{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body > main, 
+  body > nav > ul,
+  body > footer > div {
+    max-width: 960px;
+  }
+
+  body > main > section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  body > main > section > h2{
+    width: 100%;
+  }
+
+  body > main > section > article{
+    width: 50%;
+  }
+
+  body > main > section > article:last-child:nth-child(2n + 0){
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body > main, 
+  body > nav > ul,
+  body > footer > div {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body > main, 
+  body > nav > ul,
+  body > footer > div {
+    max-width: 1320px;
+  }
+
+  body > main > section > article{
+    width: 33%;
+  }
+
+  body > main > section > article:last-child:nth-child(2n + 1){
+    width: 100%;
+  }
+
+  body > main > section > article:last-child:nth-child(2n + 0){
+    width: 66%;
+  }
+}
+
+@media print {
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    video, 
+    audio, 
+    body > header, 
+    body > nav, 
+    figure.video, 
+    body > footer{
+        display: none;
+        height: 0;
+        width: 0;
+    }
+
+    body > main > section > h2{
+        width: 100%;
+    }
+
+    body > main > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section > article{
+        width: 50%;
+      }
+    
+      body > main > section > article:last-child:nth-child(2n + 0){
+        width: 100%;
+      }
+}
