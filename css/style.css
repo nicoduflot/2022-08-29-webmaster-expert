@@ -36,6 +36,11 @@ si 2em = 32 px, 1em = 16px
   background-color: #161c40;
 }
 
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+
 h1,
 h2,
 h3,
@@ -160,6 +165,11 @@ body > footer h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 75vh;
   }
 
 }
