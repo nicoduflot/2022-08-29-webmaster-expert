@@ -15,6 +15,11 @@ article aside{
   border-radius: 5px;
 }
 
+article p::before{
+  content: "\27A4";
+  display: inline-block;
+}
+
 article aside table{
   border-collapse: collapse;
   width: 100%;
