@@ -101,8 +101,10 @@ body > footer > div > nav > ul > li > a:visited {
 
 body > nav > ul > li > a:hover,
 body > nav > ul > li > a:focus,
+body > nav > ul > li > a.active,
 body > footer > div > nav > ul > li > a:hover,
-body > footer > div > nav > ul > li > a:focus {
+body > footer > div > nav > ul > li > a:focus 
+{
   color: var(--content);
   background-color: var(--link);
 }

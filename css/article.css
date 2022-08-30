@@ -1,0 +1,36 @@
+@import url('./style.css');
+body {
+  margin: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.8)), 
+              url('../images/city-black-n-white.png') bottom left fixed repeat-x;
+  background-color: black;
+}
+
+body > header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+
+body > header > h1{
+  text-shadow: 0 0 10px #6e3703 ;
+  font-size: 3rem;
+}
+
+body > main{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* media queries pour gérer le responsive sur les breakpoint */
+
+@media screen and (min-width: 576px) {
+  body > header{
+    height: calc( 100vh - 2rem );
+  }
+}
