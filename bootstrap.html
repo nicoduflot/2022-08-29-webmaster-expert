@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap</title>
-    <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
-    <link rel="stylesheet" href="./css/bootstrap-icons.css" media="all" />
+    <link rel="stylesheet" href="./css/my-bootstrap.css" media="all" />
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/bs-js.js"></script>
 </head>
 
 <body>
@@ -51,35 +51,86 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success" id="navbarSearch" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
     <main class="container">
-        <section>
-            <article>
-                <header>
-                    <h2>Exercice</h2>
-                </header>
-                <main>
-                    <p>
-                        Ajouter des classes "usuelles" Bootstrap pour : 
-                    </p>
-                    <ul>
-                        <li>styliser les boutons "lire le reste"</li>
-                        <li>Mettre en place le grid system (les sections sont des lignes, les articles des colonnes)</li>
-                        <li>Faire fonctionner le slider</li>
-                    </ul>
-                </main>
+        <section class="row">
+            <article class="col-12 mt-2 mb-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h2 class="card-title">Exercice</h2>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Ajouter des classes "usuelles" Bootstrap pour :
+                        </p>
+                        <ul>
+                            <li>styliser les boutons "lire le reste"</li>
+                            <li>Mettre en place le grid system (les sections sont des lignes, les articles des
+                                colonnes)</li>
+                            <li>Faire fonctionner le slider</li>
+                        </ul>
+                    </main>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
         </section>
         <section id="pageUp">
             <h2>Les images du moment</h2>
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade bg-dark" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/doc-signal.png" class="img-fluid d-block mx-auto"
+                            alt="Doc Brown from back to the future movie by James White">
+                        <div class="carousel-caption d-none d-md-block bg-dark opacity-75">
+                            <h5>Doc Brown</h5>
+                            <p>Doc Brown from back to the future movie by James White</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/dolf-signal.png" class="img-fluid d-block mx-auto"
+                            alt="Dolf Lundgren by James White">
+                        <div class="carousel-caption d-none d-md-block bg-dark opacity-75">
+                            <h5>Dolf Lundgren</h5>
+                            <p>Dolf Lundgren by James White</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/drive-signal.png" class="img-fluid d-block mx-auto"
+                            alt="Drive poster movie movie by James White">
+                        <div class="carousel-caption d-none d-md-block bg-dark opacity-75">
+                            <h5>Drive poster</h5>
+                            <p>Drive poster movie movie by James White</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- 
             <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                         <img src="./images/doc-signal.png" />
                     </div>
@@ -90,529 +141,675 @@
                         <img src="./images/drive-signal.png" />
                     </div>
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
+        -->
         </section>
-        <section id="derniersArticles">
+        <section class="row" id="derniersArticles">
             <h2>Derniers Articles</h2>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        <q>Lorem ipsum dolor sit amet</q> consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
-                        expedita saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
-                        molestias sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <video src="./media/Fallout-4-Launch-Trailer.mp4" controls preload="auto" 
-                    class="img-fluid" 
-                        poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" muted type="video/mp4"></video>
-                    <div class="carre"></div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <figure>
-                        <video controls preload="auto" muted class="img-fluid">
-                            <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
-                            <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
-                        </video>
-                        <figcaption>
-                            Video exemple big buck bunny
-                        </figcaption>
-                    </figure>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, numquam! Id deleniti, quas, atque
-                        neque quia rem laboriosam hic minus tempore a magnam ab natus voluptatem iste? Quasi, cumque
-                        laudantium.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h3 class="card-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            <q>Lorem ipsum dolor sit amet</q> consectetur adipisicing elit. Fuga sit aliquid nam,
+                            eveniet
+                            expedita saepe illo architecto, hic tenetur neque quia quasi doloribus molestias.
+                            Voluptates
+                            molestias sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <video src="./media/Fallout-4-Launch-Trailer.mp4" controls preload="auto" class="img-fluid"
+                            poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" muted
+                            type="video/mp4"></video>
+                        <div class="carre"></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <figure>
+                            <video controls preload="auto" muted class="img-fluid">
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                            </video>
+                            <figcaption>
+                                Video exemple big buck bunny
+                            </figcaption>
+                        </figure>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, numquam! Id deleniti,
+                            quas, atque
+                            neque quia rem laboriosam hic minus tempore a magnam ab natus voluptatem iste? Quasi,
+                            cumque
+                            laudantium.
+                        </p>
+                    </main>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <figure class="ratio ratio-16x9"">
-                        <iframe src="https://www.youtube.com/embed/4smVtUTRSPM"
-                            title="YouTube video player" frameborder="0"
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h3 class="card-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <figure class="ratio ratio-16x9"">
+                        <iframe src=" https://www.youtube.com/embed/4smVtUTRSPM" title="YouTube video player"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                    </figure>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <figure class="ratio ratio-16x9">
-                        <iframe class="ratio ratio-16x9" frameborder="0" type="text/html"
-                            src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%"
-                            allowfullscreen></iframe></figure>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <figure class="ratio ratio-16x9">
+                            <iframe class="ratio ratio-16x9" frameborder="0" type="text/html"
+                                src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%"
+                                allowfullscreen></iframe>
+                        </figure>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <figure>
-                        <audio controls>
-                            <source src="./media/diablo_town.mp3" type="audio/mp3" />
-                        </audio>
-                        <figcaption>
-                            Musique d'ambiance à Tristram dans le JV diablo
-                        </figcaption>
-                    </figure>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h3 class="card-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <figure>
+                            <audio controls>
+                                <source src="./media/diablo_town.mp3" type="audio/mp3" />
+                            </audio>
+                            <figcaption>
+                                Musique d'ambiance à Tristram dans le JV diablo
+                            </figcaption>
+                        </figure>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <figure>
-                        <img class="img-fluid" src="./images/doc-signal.png" />
-                        <figcaption>
-                            Doc from Back to the futur
-                        </figcaption>
-                    </figure>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h3 class="card-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <figure>
+                            <img class="img-fluid" src="./images/doc-signal.png" />
+                            <figcaption>
+                                Doc from Back to the futur
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <figure>
-                        <figcaption>
-                            Gotham City
-                        </figcaption>
-                        <img src="./images/city-black-n-white.png" class="img-fluid" />
-                    </figure>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-8 col-xxl-12 mt-2 mb-2">
+                <div class="card">
+                    <header class="card-header">
+                        <h3 class="card-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <figure>
+                            <figcaption>
+                                Gotham City
+                            </figcaption>
+                            <img src="./images/city-black-n-white.png" class="img-fluid" />
+                        </figure>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                    </footer>
+                </div>
             </article>
         </section>
-        <section id="evenements">
+        <section class="row" id="evenements">
             <h2>Évenements</h2>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, numquam! Id deleniti, quas, atque
-                        neque quia rem laboriosam hic minus tempore a magnam ab natus voluptatem iste? Quasi, cumque
-                        laudantium.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+
+                    <header class="card-header">
+                        <h3 class="class-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <he<footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                        </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+
+                    <header class="card-header">
+                        <h3 class="class-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <he<footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                        </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-4 col-xxl-3 my-2">
+                <div class="card">
+
+                    <header class="card-header">
+                        <h3 class="class-title">Titre</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet
+                            expedita
+                            saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates
+                            molestias
+                            sunt modi doloremque officiis!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat
+                            tempora
+                            impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
+                            pariatur molestias quibusdam officiis accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <he<footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                        </footer>
+                </div>
             </article>
-            <article>
-                <header>
-                    <h3>Titre</h3>
-                </header>
-                <main>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sit aliquid nam, eveniet expedita
-                        saepe illo architecto, hic tenetur neque quia quasi doloribus molestias. Voluptates molestias
-                        sunt modi doloremque officiis!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde error, laboriosam placeat tempora
-                        impedit sunt autem nobis enim eius, exercitationem quisquam, quae deleniti vero adipisci
-                        pariatur molestias quibusdam officiis accusamus!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum libero saepe
-                        atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam laudantium
-                        blanditiis possimus earum corrupti vitae?
-                    </p>
-                    <h4>
-                        Partie 1
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis, cumque
-                        molestiae in id repellendus officia asperiores nostrum quis dolorum provident est excepturi quas
-                        cupiditate numquam aperiam at.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia aliquid
-                        distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum molestias fuga
-                        alias similique odit error autem!
-                    </p>
-                    <h4>Partie 2</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
-                        temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit dolores
-                        possimus aliquid perferendis distinctio.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor totam
-                        minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo inventore
-                        itaque alias iure illo.
-                    </p>
-                    <h4>Conclusion</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum magnam
-                        nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
-                        exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
-                    </p>
-                </main>
-                <footer>
-                    <a href=""><button role="link">Lire le reste</button></a>
-                </footer>
+            <article class="col-lg-12 col-xxl-3 mt-2 mb-2">
+                <div class="card">
+
+                    <header class="card-header">
+                        <h3 class="class-title">Barre de progrès</h3>
+                    </header>
+                    <main class="card-body">
+                        <p>
+                            <button class="btn btn-outline-primary" id="btnProgress01">
+                                Déclencher la simulation de progress bar
+                            </button>
+                            <button class="btn btn-outline-secondary" id="btnProgress01Reset">
+                                Reset progress bar
+                            </button>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" aria-label="Animated striped example" id="progress01" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                          </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aliquid voluptatum
+                            libero saepe
+                            atque tempora nostrum quis ducimus, porro, aut officiis non consequuntur aperiam
+                            laudantium
+                            blanditiis possimus earum corrupti vitae?
+                        </p>
+                        <h4>
+                            Partie 1
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quia hic perferendis,
+                            cumque
+                            molestiae in id repellendus officia asperiores nostrum quis dolorum provident est
+                            excepturi quas
+                            cupiditate numquam aperiam at.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium quia
+                            aliquid
+                            distinctio maxime molestias quas illo fugit eum omnis. Reiciendis ullam nostrum
+                            molestias fuga
+                            alias similique odit error autem!
+                        </p>
+                        <h4>Partie 2</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem debitis earum odio in eius
+                            temporibus, ad nisi voluptate tempora ab suscipit praesentium consequatur voluptates sit
+                            dolores
+                            possimus aliquid perferendis distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui placeat, dolor
+                            totam
+                            minus quas blanditiis deleniti aliquam, nisi facere quae quo corrupti porro, explicabo
+                            inventore
+                            itaque alias iure illo.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos accusamus in rerum
+                            magnam
+                            nihil? Assumenda, facere? Consectetur dolorum unde mollitia, nulla temporibus laboriosam
+                            exercitationem. Quisquam exercitationem expedita quam blanditiis quos.
+                        </p>
+                    </main>
+                    <he<footer class="text-center card-footer">
+                        <a href=""><button class="btn btn-warning" role="link">Lire le reste</button></a>
+                        </footer>
+                </div>
             </article>
         </section>
     </main>
