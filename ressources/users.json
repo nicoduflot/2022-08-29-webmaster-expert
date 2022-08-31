@@ -7,7 +7,7 @@
     "address": {
       "street": "Kulas Light",
       "suite": "Apt. 556",
-      "city": "Gwenborough",
+      "city": "Lille",
       "zipcode": "92998-3874",
       "geo": {
         "lat": "-37.3159",
@@ -24,7 +24,7 @@
   },
   {
     "id": 2,
-    "name": "Ervin Howell",
+    "name": "Ervin Howell test",
     "username": "Antonette",
     "email": "Shanna@melissa.tv",
     "address": {
@@ -64,13 +64,13 @@
     "website": "ramiro.info",
     "company": {
       "name": "Romaguera-Jacobson",
-      "catchPhrase": "Face to face bifurcated interface",
+      "catchPhrase": "Face to face bifurcated interface test",
       "bs": "e-enable strategic applications"
     }
   },
   {
     "id": 4,
-    "name": "Patricia Lebsack",
+    "name": "Patricia Lebsack test",
     "username": "Karianne",
     "email": "Julianne.OConner@kory.org",
     "address": {
