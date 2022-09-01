@@ -1,0 +1,26 @@
+// partie des mixins
+@mixin listeSitemap() {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin lienListeSitemap() {
+    display: block;
+    line-height: 2rem;
+    padding: 2px 25px;
+    color: var(--link);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@mixin lienListeSitempaActive {
+    color: var(--content);
+    background-color: var(--link);
+}
+
+@mixin ambiance($ambiance: darkred){
+    color: $ambiance;
+    font-weight: bold;
+}

@@ -1,18 +1,122 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
-  --bg-site: #ffffff; /* white #fff rgb(255, 255, 255) rgba(255, 255, 255, 1) */
-  --heading: #f20505;
-  --content: #161c40;
-  --link: #f2a30f;
-  --link-hover: #f27507;
-  --heading: "GoghExtraBold";
-}
-
+@charset "UTF-8";
 @font-face {
   font-family: "GoghExtraBold";
   src: url("../fonts/GoghExtraBold.eot");
   src: url("../fonts/GoghExtraBold.eot") format("embedded-opentype"), url("../fonts/GoghExtraBold.woff2") format("woff2"), url("../fonts/GoghExtraBold.woff") format("woff"), url("../fonts/GoghExtraBold.ttf") format("truetype"), url("../fonts/GoghExtraBold.svg#GoghExtraBold") format("svg");
 }
-/*  test  test */
+/* les variables avec sass */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --bg-site: #ffffff;
+  --heading: #f20505;
+  --content: #161c40;
+  --link: #f2a30f;
+  --link-hover: #f27507;
+  --heading: GoghExtraBold;
+}
+
+.alert-bad, .alert-ok, .alert {
+  display: block;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+/* les classes */
+.ambiance-rouge {
+  color: darkred;
+  font-weight: bold;
+}
+
+.ambiance-verte {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.alert-ok {
+  background-color: rgba(0, 100, 0, 0.5);
+  border-color: darkgreen;
+}
+
+.alert-bad {
+  background-color: rgba(139, 0, 0, 0.5);
+  border-color: darkred;
+}
+
+/* régler les problèmes de calcul des boîtes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+body > header {
+  background-color: var(--content);
+  color: var(--bg-site);
+  padding: 0.1rem 0.5rem;
+}
+body > nav {
+  background-color: var(--content);
+}
+body > nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body > nav ul li a, body > nav ul li a:visited {
+  display: block;
+  line-height: 2rem;
+  padding: 2px 25px;
+  color: var(--link);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+body > nav ul li a:hover,
+body > nav ul li a:focus,
+body > nav ul li a:active {
+  color: var(--content);
+  background-color: var(--link);
+}
+body > main,
+body > nav > ul,
+body > footer > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body > main {
+  padding: 5px 10px;
+}
+body > main > section > article {
+  border: 0px solid transparent;
+  padding: 5px;
+}
+body > footer {
+  background-color: var(--content);
+}
+body > footer > div > nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body > footer > div > nav ul li a, body > footer > div > nav ul li a:visited {
+  display: block;
+  line-height: 2rem;
+  padding: 2px 25px;
+  color: var(--link);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+body > footer > div > nav ul li a:hover,
+body > footer > div > nav ul li a:focus {
+  color: var(--content);
+  background-color: var(--link);
+}
 
 /*# sourceMappingURL=output.css.map */

@@ -1,10 +1,19 @@
+/* les variables avec sass */
+
+$white: #ffffff;
+$font-base:  Arial, Helvetica, sans-serif;
+$red: #f20505;
+$dark-marine-blue : #161c40;
+$light-orange: #f2a30f;
+$orange: #f27507;
+$font-heading: "GoghExtraBold";
 
 :root {
-    font-family: Arial, Helvetica, sans-serif;
-    --bg-site: #ffffff; /* white #fff rgb(255, 255, 255) rgba(255, 255, 255, 1) */
-    --heading: #f20505;
-    --content: #161c40;
-    --link: #f2a30f;
-    --link-hover: #f27507;
-    --heading: "GoghExtraBold";
+    font-family: #{$font-base};
+    --bg-site: #{$white};
+    --heading: #{$red};
+    --content: #{$dark-marine-blue};
+    --link: #{$light-orange};
+    --link-hover: #{$orange};
+    --heading: #{$font-heading};
   }

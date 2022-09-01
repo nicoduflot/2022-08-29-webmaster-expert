@@ -1,4 +1,109 @@
-@use '_root';
-@use '_fonts';
+@use "_fonts";
+@use "_root";
+@import "_mixins";
 
-/*  test  test */
+// étendre - héritage
+%alert {
+    display: block;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* les classes */
+
+.ambiance-rouge{
+    @include ambiance();
+}
+
+.ambiance-verte{
+    @include ambiance($ambiance: darkgreen);
+}
+
+.alert{
+    @extend %alert;
+}
+
+.alert-ok{
+    @extend %alert;
+    background-color: rgba(0, 100, 0, 0.5);
+    border-color: darkgreen;
+}
+
+.alert-bad{
+    @extend %alert;
+    background-color: rgba(139, 0, 0, 0.5);
+    border-color: darkred;
+}
+
+/* régler les problèmes de calcul des boîtes */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    >header {
+        background-color: var(--content);
+        color: var(--bg-site);
+        padding: 0.1rem 0.5rem;
+    }
+    >nav {
+        background-color: var(--content);
+
+        ul{
+            @include listeSitemap();
+            li {
+                a, a:visited{
+                    @include lienListeSitemap();
+                }
+                a:hover, 
+                a:focus, 
+                a:active{
+                    @include lienListeSitempaActive()
+                }
+            }
+        }
+    }
+
+    >main, 
+    >nav > ul, 
+    >footer > div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    > main{
+        padding: 5px 10px;
+        > section{
+            > article{
+                border: 0px solid transparent;
+                padding: 5px;
+            }
+        }
+    }
+
+    >footer {
+        background-color: var(--content);
+        >div {
+            >nav {
+                ul {
+                    @include listeSitemap();
+                    li {
+                        a, a:visited{
+                            @include lienListeSitemap();
+                        }
+                        a:hover, 
+                        a:focus{
+                            @include lienListeSitempaActive()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
