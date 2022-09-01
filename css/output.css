@@ -322,5 +322,36 @@ body > footer > div {
     width: 50%;
   }
 }
+.test {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .test {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .test {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .test {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .test {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .test {
+    max-width: 1320px;
+  }
+}
 
 /*# sourceMappingURL=output.css.map */
