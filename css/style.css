@@ -176,18 +176,6 @@ body > footer h3{
   body > footer > div {
     max-width: 540px;
   }
-/*
-  body > nav > ul{
-    columns: 2;
-  }
-
-  body > nav > ul > li > a,
-  body > nav > ul > li > a:visited{
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-*/
 
   body > nav > ul{
     display: flex;

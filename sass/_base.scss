@@ -1,109 +1,243 @@
+@use "sass:map";
 @use "_fonts";
 @use "_root";
+@import "_variables";
 @import "_mixins";
 
 // étendre - héritage
 %alert {
-    display: block;
-    border-width: 1px;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
+  display: block;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
 }
 
 /* les classes */
 
-.ambiance-rouge{
-    @include ambiance();
+figure.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 
-.ambiance-verte{
-    @include ambiance($ambiance: darkgreen);
+iframe.video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
 }
 
-.alert{
-    @extend %alert;
+// utiliser les mixins
+.ambiance-rouge {
+  @include ambiance();
 }
 
-.alert-ok{
-    @extend %alert;
-    background-color: rgba(0, 100, 0, 0.5);
-    border-color: darkgreen;
+.ambiance-verte {
+  @include ambiance($ambiance: darkgreen);
 }
 
-.alert-bad{
-    @extend %alert;
-    background-color: rgba(139, 0, 0, 0.5);
-    border-color: darkred;
+// étendre et hériter
+
+.alert {
+  @extend %alert;
+}
+
+.alert-ok {
+  @extend %alert;
+  background-color: rgba(0, 100, 0, 0.5);
+  border-color: darkgreen;
+}
+
+.alert-bad {
+  @extend %alert;
+  background-color: rgba(139, 0, 0, 0.5);
+  border-color: darkred;
+}
+
+.carre {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background-color: #161c40;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  width: 100%;
+}
+
+.pageUp {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--link-hover);
+  background-color: var(--link);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  opacity: 50%;
+  z-index: 3;
+  a {
+    color: white;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    display: block;
+  }
+  &:hover {
+    background-color: var(--link-hover);
+  }
 }
 
 /* régler les problèmes de calcul des boîtes */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* éléments génériques */
+
+img,
+video {
+  max-width: 100%;
 }
 
 body {
-    margin: 0;
-    >header {
-        background-color: var(--content);
-        color: var(--bg-site);
-        padding: 0.1rem 0.5rem;
-    }
-    >nav {
-        background-color: var(--content);
+  margin: 0;
+  > header {
+    background-color: var(--content);
+    color: var(--bg-site);
+    padding: 0.1rem 0.5rem;
+  }
+  > nav {
+    background-color: var(--content);
 
-        ul{
-            @include listeSitemap();
-            li {
-                a, a:visited{
-                    @include lienListeSitemap();
-                }
-                a:hover, 
-                a:focus, 
-                a:active{
-                    @include lienListeSitempaActive()
-                }
-            }
+    ul {
+      @include listeSitemap();
+      li {
+        a {
+          @include lienListeSitemap();
+          &:visited {
+            @include lienListeSitemap();
+          }
+          &:hover,
+          &:focus,
+          &:active {
+            @include lienListeSitempaActive();
+          }
         }
+      }
     }
+  }
 
-    >main, 
-    >nav > ul, 
-    >footer > div{
-        width: 100%;
+  > main,
+  > nav > ul,
+  > footer > div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    > nav h3{
+      color: var(--link);
+      padding-left: 25px;
+    }
+  }
+
+  > main {
+    padding: 5px 10px;
+    > section {
+      > article {
+        border: 0px solid transparent;
+        padding: 5px;
+      }
+    }
+  }
+
+  > footer {
+    background-color: var(--content);
+    > div {
+      > nav {
+        ul {
+          @include listeSitemap();
+          li a {
+            @include lienListeSitemap();
+            &:visited {
+              @include lienListeSitemap();
+            }
+            &:hover,
+            &:focus {
+              @include lienListeSitempaActive();
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @media screen and (min-width: #{$value}) {
+    body {
+      > main,
+      > nav > ul,
+      > footer > div {
+        max-width: #{map.get($rwd-max-width, $breakpoint)}px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    > main{
-        padding: 5px 10px;
-        > section{
-            > article{
-                border: 0px solid transparent;
-                padding: 5px;
-            }
+      }
+      @if map.get($rwd-max-width, $breakpoint) > 768 {
+        // on vérifie si la largeur minimum dépasse un breakpoint défini
+        // si oui ces règles seront compilées sinon non.
+        > nav > ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
         }
-    }
-
-    >footer {
-        background-color: var(--content);
-        >div {
-            >nav {
-                ul {
-                    @include listeSitemap();
-                    li {
-                        a, a:visited{
-                            @include lienListeSitemap();
-                        }
-                        a:hover, 
-                        a:focus{
-                            @include lienListeSitempaActive()
-                        }
-                    }
-                }
+        > main > section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          > article {
+            width: map.get($rwd-column-width, $breakpoint);
+          }
+          @if ($breakpoint == "lg") {
+            > article:last-child:nth-child(2n + 0) {
+              width: 100%;
             }
+          }
+          @if ($breakpoint == "xl") {
+            > article:last-child:nth-child(2n + 0) {
+              width: 66%;
+            }
+
+            > article:last-child:nth-child(2n + 1) {
+              width: 100%;
+            }
+          }
         }
+        > footer {
+          div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          nav {
+            width: 50%;
+          }
+        }
+      }
     }
+  }
 }
