@@ -1,0 +1,19 @@
+{
+  "name": "2022-08-29-webmaster-expert",
+  "version": "1.0.0",
+  "description": "Formation webmaster expert demo sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoduflot/2022-08-29-webmaster-expert.git"
+  },
+  "author": "nicolas duflot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoduflot/2022-08-29-webmaster-expert/issues"
+  },
+  "homepage": "https://github.com/nicoduflot/2022-08-29-webmaster-expert#readme"
+}

@@ -1,0 +1,18 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --bg-site: #ffffff; /* white #fff rgb(255, 255, 255) rgba(255, 255, 255, 1) */
+  --heading: #f20505;
+  --content: #161c40;
+  --link: #f2a30f;
+  --link-hover: #f27507;
+  --heading: "GoghExtraBold";
+}
+
+@font-face {
+  font-family: "GoghExtraBold";
+  src: url("../fonts/GoghExtraBold.eot");
+  src: url("../fonts/GoghExtraBold.eot") format("embedded-opentype"), url("../fonts/GoghExtraBold.woff2") format("woff2"), url("../fonts/GoghExtraBold.woff") format("woff"), url("../fonts/GoghExtraBold.ttf") format("truetype"), url("../fonts/GoghExtraBold.svg#GoghExtraBold") format("svg");
+}
+/*  test  test */
+
+/*# sourceMappingURL=output.css.map */
