@@ -1,0 +1,31 @@
+//root du css qui appelle des variables
+@import "_variables";
+
+:root{
+    --white: #{$white};
+    --darker-red: #{$darker-red};
+    --dark-red: #{$dark-red};
+    --another-red: #{$another-red};
+    --light-red: #{$light-red};
+    --orange: #{$orange};
+    --light-orange: #{$light-orange};
+    --dark-grey: #{$dark-grey};
+    --grey: #{$grey};
+    --another-grey: #{$another-grey};
+    --lighter-grey: #{$lighter-grey};
+    --lighter-orange: #{$lighter-orange};
+    --lighter-green: #{$lighter-green};
+    --black: #{$black};
+    --title-1: #{$title-1};
+    --normal-font: #{$normal-font};
+    --lighter-orange-10: #{$lighter-orange-10};
+    --lighter-orange-20: #{$lighter-orange-20};
+    --lighter-orange-30: #{$lighter-orange-30};
+    --lighter-orange-40: #{$lighter-orange-40};
+    --lighter-orange-50: #{$lighter-orange-50};
+    --lighter-orange-60: #{$lighter-orange-60};
+    --lighter-orange-70: #{$lighter-orange-70};
+    --lighter-orange-80: #{$lighter-orange-80};
+    --lighter-orange-90: #{$lighter-orange-90};
+    font-size: 62.5%;
+}

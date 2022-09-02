@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('fonts/ComfortaaRegular.eot');
+    src: url('fonts/ComfortaaRegular.eot') format('embedded-opentype'),
+         url('fonts/ComfortaaRegular.woff2') format('woff2'),
+         url('fonts/ComfortaaRegular.woff') format('woff'),
+         url('fonts/ComfortaaRegular.ttf') format('truetype'),
+         url('fonts/ComfortaaRegular.svg#ComfortaaRegular') format('svg');
+}

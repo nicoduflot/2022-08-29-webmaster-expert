@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Augusta';
+    src: url('fonts/Augusta.eot');
+    src: url('fonts/Augusta.eot') format('embedded-opentype'),
+         url('fonts/Augusta.woff2') format('woff2'),
+         url('fonts/Augusta.woff') format('woff'),
+         url('fonts/Augusta.ttf') format('truetype'),
+         url('fonts/Augusta.svg#Augusta') format('svg');
+}

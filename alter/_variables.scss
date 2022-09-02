@@ -1,0 +1,51 @@
+$white: white;
+$darker-red: #6d0000;
+$dark-red: #b80000;
+$another-red:#b30303;
+$light-red: #d80000;
+$orange: #da801a;
+$light-orange: #e69a28;
+$dark-grey: #444;
+$grey: #707070;
+$another-grey: #404040;
+$lighter-grey: #888;
+$lighter-orange-10:rgba(253, 241, 220, 0.1);
+$lighter-orange-20:rgba(253, 241, 220, 0.2);
+$lighter-orange-30:rgba(253, 241, 220, 0.3);
+$lighter-orange-40:rgba(253, 241, 220, 0.4);
+$lighter-orange-50:rgba(253, 241, 220, 0.5);
+$lighter-orange-60:rgba(253, 241, 220, 0.6);
+$lighter-orange-70:rgba(253, 241, 220, 0.7);
+$lighter-orange-80:rgba(253, 241, 220, 0.8);
+$lighter-orange-90:rgba(253, 241, 220, 0.9);
+$lighter-orange:#fdf1dc;
+$lighter-green: #dbe2c2;
+$black: black;
+$title-1: "'Augusta'";
+$normal-font: "'ComfortaaRegular'", Arial, sans-serif;
+
+$test: 'test';
+
+$breakpoints: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400
+);
+
+$rwd-max-width: (
+  sm: 540,
+  md: 720,
+  lg: 960,
+  xl: 1140,
+  xxl: 1320
+);
+
+$rwd-column-width: (
+    sm: 100%,
+  md: 50%,
+  lg: 50%,
+  xl: 33%,
+  xxl: 33%
+);
