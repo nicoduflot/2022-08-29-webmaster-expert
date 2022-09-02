@@ -14,6 +14,7 @@
   --dark-red: #b80000;
   --another-red: #b30303;
   --light-red: #d80000;
+  --dark-orange: #bb6d15;
   --orange: #da801a;
   --light-orange: #e69a28;
   --dark-grey: #444;
@@ -35,6 +36,12 @@
   --lighter-orange-80: rgba(253, 241, 220, 0.8);
   --lighter-orange-90: rgba(253, 241, 220, 0.9);
   font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .parchemin {
@@ -60,12 +67,6 @@ h6 {
   margin: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--normal-font);
   font-size: 1.5rem;
@@ -82,11 +83,37 @@ body > header {
 body > header h1 {
   font-size: 4rem;
 }
+body > nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+}
+body > nav ul li {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+body > nav ul a {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: var(--darker-red);
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+body > nav ul a:hover, body > nav ul a:focus {
+  color: var(--dark-orange);
+  border: 1px solid var(--dark-orange);
+}
+body > nav ul a:focus {
+  border: 1px solid var(--dark-orange);
+}
 body > main > section {
   border: 0px solid #000;
 }
 body > main > section article {
-  margin: 10px;
+  margin: 8px 10px;
   border: 0px solid #f00;
   background-color: var(--lighter-orange-30);
   box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5);
@@ -97,6 +124,15 @@ body > main > section article {
   body .conteneur {
     max-width: 540px;
   }
+  body > nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  body > nav ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   body .conteneur {
@@ -104,11 +140,11 @@ body > main > section article {
   }
 }
 @media screen and (min-width: 992px) {
-  body header {
-    height: 18vh;
-  }
   body .conteneur {
     max-width: 960px;
+  }
+  body > header {
+    height: 18vh;
   }
   body > main > section {
     display: flex;

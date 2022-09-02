@@ -4,6 +4,12 @@
 @import "_variables";
 @import "_mixins";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .parchemin {
   background-color: var(--lighter-orange);
   background-image: url("../images/fond-mm-effet.png"),
@@ -27,11 +33,7 @@ h6 {
   font-family: var(--title-1);
   margin: 0;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 body {
   font-family: var(--normal-font);
   font-size: 1.5rem;
@@ -47,11 +49,39 @@ body {
       font-size: 4rem;
     }
   }
+  > nav{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height: 4rem;
+        li{
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+        }
+        a{
+            display: block;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: var(--darker-red);
+            font-weight: bold;
+            border: 1px solid transparent;
+            &:hover, &:focus{
+                color: var(--dark-orange);
+                border: 1px solid var(--dark-orange);
+            }
+            &:focus{
+                border: 1px solid var(--dark-orange);
+            }
+        }
+    }
+  }
   > main {
     > section {
       border: 0px solid #000;
       article {
-        margin: 10px;
+        margin: 8px 10px;
         border: 0px solid #f00;
         background-color: var(--lighter-orange-30);
         box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5);
@@ -64,13 +94,26 @@ body {
 @each $breakpoint, $value in $breakpoints {
   @media screen and (min-width: #{$value}px) {
     body {
+      .conteneur {
+        max-width: #{map.get($rwd-max-width, $breakpoint)}px;
+      }
       @if $value == 992 {
-        header {
+        > header {
           height: 18vh;
         }
       }
-      .conteneur {
-        max-width: #{map.get($rwd-max-width, $breakpoint)}px;
+      @if $value == 576 {
+        > nav{
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
       }
       > main {
         @if map.get($rwd-max-width, $breakpoint) > 740 {
