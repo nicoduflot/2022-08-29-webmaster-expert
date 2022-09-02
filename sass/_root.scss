@@ -10,6 +10,7 @@ $font-heading: "GoghExtraBold";
 
 :root {
     font-family: #{$font-base};
+    /* font-family: 'GoghExtraBold' */
     --bg-site: #{$white};
     --heading: #{$red};
     --content: #{$dark-marine-blue};
