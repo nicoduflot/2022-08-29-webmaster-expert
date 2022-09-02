@@ -1,0 +1,20 @@
+@mixin caracBorder {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    border-left-color: var(--darker-red);
+    border-right-color: var(--darker-red);
+  }
+
+@mixin autoCenterBlock {
+    width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin divSpecPad {
+    display: inline-block;
+    margin: 4px 4px 8px 0;
+    padding: 0 3px;
+}
+

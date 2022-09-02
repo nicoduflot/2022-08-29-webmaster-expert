@@ -1,3 +1,231 @@
+:root {
+  --white: white;
+  --darker-red: #6d0000;
+  --dark-red: #b80000;
+  --another-red: #b30303;
+  --light-red: #d80000;
+  --orange: #da801a;
+  --light-orange: #e69a28;
+  --dark-grey: #444;
+  --grey: #707070;
+  --another-grey: #404040;
+  --lighter-grey: #888;
+  --lighter-orange: #fdf1dc;
+  --lighter-green: #dbe2c2;
+  --black: black;
+  --title-1: Georgia, 'Times New Roman', serif;
+  --normal-font: Arial, sans-serif;
+  font-size: 62.5%;
+}
 
+.bloc {
+  padding: 10px 20px 0 20px;
+  font-family: var(--title-1);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  break-inside: avoid;
+}
+
+.trad {
+  padding: 2px 0 0px 0;
+  font-family: var(--normal-font);
+  font-size: 1.2rem;
+}
+
+.carac {
+  display: inline-block;
+  padding-left: 16px;
+  text-align: center;
+}
+
+.rub {
+  color: #6d0000;
+  margin: 10px 0 5px 0;
+  border-bottom: 1px solid #b30303;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.type {
+  padding: 2px 0 0px 0;
+  text-align: left;
+  font-style: italic;
+}
+
+.description {
+  padding: 4px 0 6px 0;
+  text-align: justify;
+}
+
+.center {
+  text-align: center;
+}
+
+.picture {
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: varvar(--normal-font);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.orange {
+  border: 1px var(--black) solid;
+  background-color: var(--light-orange);
+  width: 100%;
+  height: 6px;
+}
+
+.jaune {
+  background-color: var(--lighter-orange);
+  padding: 10px 8px 5px 8px;
+  margin: 0 2px 0 2px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  background-image: url("../images/fond-mm-effet.png"), url("../images/fond-ph.jpg");
+  background-repeat: repeat-x, repeat;
+}
+
+.sansSerif {
+  font-family: var(--normal-font);
+}
+
+.red {
+  color: var(--darker-red);
+}
+
+.blocCarte {
+  display: inline-block;
+  position: relative;
+  width: 6.3cm;
+  height: 8.8cm;
+  margin: 1px 0 0 1px;
+  padding: 3px;
+  vertical-align: top;
+  border: 4px solid var(--black);
+  background: var(--white) url("../images/fond-dmg.jpg") repeat;
+  overflow: hidden;
+  font-family: var(--title-1);
+  text-align: left;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.cols1 {
+  column-span: all;
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cols2 {
+  column-count: 2;
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cols1A {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  display: inline-block;
+  width: 490px;
+  border: 1px;
+}
+
+body {
+  background: var(--white) url("../images/fond-dmg.jpg") repeat;
+}
+body h1 {
+  padding: 0;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  color: var(--darker-red);
+  font-size: 1.8rem;
+  line-height: 1;
+  break-after: avoid;
+  margin: 0;
+}
+body svg {
+  width: 100%;
+  height: 5px;
+}
+body figure {
+  margin: 0;
+}
+body div.source {
+  display: inline-block;
+  margin: 4px 4px 8px 0;
+  padding: 0 3px;
+  background-color: var(--white);
+  font-family: varvar(--normal-font);
+  font-size: 1.1rem;
+}
+body div.ref {
+  padding: 4px 0 4px 0;
+  font-family: varvar(--normal-font);
+  font-size: 1.1rem;
+}
+body p {
+  padding: 0;
+  margin: 5px 0 5px 0;
+}
+body ul {
+  list-style: square outside;
+  margin-left: 17px;
+}
+body ul.spec {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body li {
+  margin-top: 3px;
+}
+body a,
+body a:visited {
+  text-decoration: none;
+  color: var(--light-red);
+}
+body a:hover {
+  color: #d80000;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+body img {
+  border: 4px solid var(--lighter-grey);
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  width: auto;
+}
+
+@media only screen and (max-width: 980px) {
+  html {
+    font-size: 80%;
+  }
+  .bloc {
+    min-width: auto;
+    padding: 3%;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .cols2 {
+    column-count: 1;
+    width: 100%;
+  }
+  .cols1A {
+    width: 100%;
+    margin: 0;
+  }
+  .content {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=output-ex.css.map */
